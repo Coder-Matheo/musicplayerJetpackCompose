@@ -17,21 +17,44 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun HomeScreen() {
+    val imageMusic = listOf(
+        RinkingMusicData(
+            nameMusic = "Sogand",
+            imageVector = R.drawable.color_back,
+            "Image profile"
+        ),
+        RinkingMusicData(
+            nameMusic = "Sogand",
+            imageVector = R.drawable.color_back,
+            "Image profile"
+        ),
+        RinkingMusicData(
+            nameMusic = "Sogand",
+            imageVector = R.drawable.brandenburger_pic,
+            "Image profile"
+        ),
+        RinkingMusicData(
+            nameMusic = "Sogand",
+            imageVector = R.drawable.color_back,
+            "Image profile"
+        ),
+        RinkingMusicData(
+            nameMusic = "Sogand",
+            imageVector = R.drawable.color_back,
+            "Image profile"
+        )
+    )
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(id = R.color.teal_700))
-            .wrapContentSize(Alignment.Center)
+            .background(colorResource(id = R.color.purple_200))
+            //.wrapContentSize(Alignment.Center)
     ) {
-        Text(
-            text = "Home Screen",
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            modifier = Modifier
-                .align(Alignment.CenterHorizontally),
-            textAlign = TextAlign.Center,
-            fontSize = 25.sp
-        )
+        SearchScreen()
+        HorizontalPagerScreen()
+        LazyColumnScreen(imageMusic = imageMusic)
+
     }
 }
 
