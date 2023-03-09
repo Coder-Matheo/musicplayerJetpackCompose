@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Music player jetpack compose Demo</string>
+    <string name="share">Share</string>
+    <string name="Delete">Delete</string>
+    <string name="Save">Save</string>
+    <string name="hint_search_query">Search here ..</string>
+</resources>
