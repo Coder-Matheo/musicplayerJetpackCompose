@@ -13,7 +13,6 @@ fun Navigation(navController: NavHostController) {
         startDestination = NavigationItem.Home.route
     ){
         composable(NavigationItem.Home.route){
-            Log.i("TAG", "Navigation: ")
             HomeScreen()
         }
         composable(NavigationItem.Music.route){
@@ -24,6 +23,16 @@ fun Navigation(navController: NavHostController) {
         }
         composable(NavigationItem.Books.route){
             BooksScreen()
+        }
+        //NavigationDrawer
+        composable(BottomNavItem.Home.route){
+            HomeScreen()
+        }
+        composable(BottomNavItem.Create.route){
+            MusicScreen()
+        }
+        composable(BottomNavItem.Settings.route){
+            MoviesScreen()
         }
     }
 }

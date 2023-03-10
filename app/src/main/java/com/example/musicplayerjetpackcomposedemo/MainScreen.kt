@@ -19,7 +19,10 @@ fun MainScreen() {
     val scaffoldState = rememberScaffoldState()
 
     Scaffold(topBar = { TopBar() },
-        drawerContent = { },
+        drawerContent = {
+                        NavigationDrawer(navController = navController)
+        },
+        drawerGesturesEnabled = true,
         floatingActionButton = {
             ExtendedFloatingActionButton(text = { Text(text = "snackbar") },
                 onClick = {
@@ -49,6 +52,7 @@ fun MainScreen() {
         content = {
             Navigation(navController = navController)
         },
+
         bottomBar = {
 
             BottomAppBar(
